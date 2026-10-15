@@ -1,0 +1,205 @@
+[
+  {
+    "id": "ti-dev-sistemas",
+    "titulo": "Técnico em Desenvolvimento de Sistemas",
+    "area": "Tecnologia da Informação",
+    "cargaHoraria": "1.200 horas",
+    "modalidade": "Semipresencial / Presencial",
+    "nivel": "Técnico (Novo Ensino Médio)",
+    "publico": "Estudantes do 1º ao 3º ano do Ensino Médio",
+    "alinhamento": "Itinerário de Formação Técnica e Profissional (V)",
+    "icone": "💻",
+    "badge": "Mais Procurado",
+    "descricao": "Capacita os estudantes para criar, projetar e manter softwares corporativos, aplicativos web e mobile, integrando programação moderna (Python, Java, JavaScript) e inteligência artificial.",
+    "competencias": [
+      "Desenvolvimento Front-end e Back-end",
+      "Modelagem e Gestão de Banco de Dados (SQL/NoSQL)",
+      "Lógica de Programação e Algoritmos",
+      "Metodologias Ágeis (Scrum) e Git/GitHub",
+      "Fundamentos de Inteligência Artificial e APIs"
+    ],
+    "beneficioSecretaria": "Garante alta taxa de empregabilidade aos jovens da rede pública, alinhando a escola às demandas do setor tech da região."
+  },
+  {
+    "id": "mecatronica-robotica",
+    "titulo": "Técnico em Mecatrônica & Robótica Industrial",
+    "area": "Indústria 4.0 & Automação",
+    "cargaHoraria": "1.200 horas",
+    "modalidade": "Presencial",
+    "nivel": "Técnico (Novo Ensino Médio)",
+    "publico": "Alunos do Ensino Médio Regular e EJA",
+    "alinhamento": "Itinerário Técnico e Profissional",
+    "icone": "🤖",
+    "badge": "Indústria 4.0",
+    "descricao": "Formação de excelência em automação industrial, braços robóticos, sensores inteligentes, sistemas eletropneumáticos e programação de CLPs industriais nos laboratórios SENAI.",
+    "competencias": [
+      "Programação de Controladores Lógicos Programáveis (CLP)",
+      "Operação e Programação de Células Robóticas",
+      "Sistemas Eletropneumáticos e Eletro-hidráulicos",
+      "Instrumentação Industrial e Sensores",
+      "Manutenção Preventiva e Corretiva em Linhas Automatizadas"
+    ],
+    "beneficioSecretaria": "Proporciona aos alunos acesso aos laboratórios industriais mais modernos do Brasil, fomentando a vocação científica e tecnológica."
+  },
+  {
+    "id": "eletrotecnica-solar",
+    "titulo": "Técnico em Eletrotécnica & Energias Renováveis",
+    "area": "Eletroeletrônica & Energia",
+    "cargaHoraria": "1.200 horas",
+    "modalidade": "Presencial",
+    "nivel": "Técnico",
+    "publico": "Ensino Médio e Jovens e Adultos",
+    "alinhamento": "Transição Energética & EPT",
+    "icone": "⚡",
+    "badge": "Sustentabilidade",
+    "descricao": "Prepara profissionais para projetar, instalar e operar instalações elétricas prediais e industriais, com ênfase especial em sistemas de energia solar fotovoltaica e eficiência energética.",
+    "competencias": [
+      "Instalação e Dimensionamento de Painéis Fotovoltaicos",
+      "Instalações Elétricas Industriais e Prediais (NR-10)",
+      "Projetos em CAD e Leitura de Diagramas Elétricos",
+      "Sistemas de Comando e Acionamento de Motores",
+      "Eficiência Energética e Laudos Técnicos"
+    ],
+    "beneficioSecretaria": "Atende à demanda urgente de técnicos em energia limpa nos municípios, com registro profissional no CFT/CRT garantido aos formandos."
+  },
+  {
+    "id": "ia-dados",
+    "titulo": "Inteligência Artificial Aplicada & Ciência de Dados",
+    "area": "Tecnologia & Dados",
+    "cargaHoraria": "160 horas",
+    "modalidade": "Semipresencial",
+    "nivel": "Qualificação Profissional",
+    "publico": "Alunos da rede pública (a partir de 15 anos)",
+    "alinhamento": "Letramento Digital e Inovação",
+    "icone": "🧠",
+    "badge": "Futuro do Trabalho",
+    "descricao": "Curso rápido e prático onde os estudantes aprendem fundamentos de Python para análise de dados, treinamento de modelos de machine learning e uso ético de IAs generativas.",
+    "competencias": [
+      "Programação Python para Análise de Dados",
+      "Visualização de Dados com Bibliotecas Modernas",
+      "Criação de Prompts e Soluções com IA Generativa",
+      "Ética, Privacidade e Segurança de Dados (LGPD)"
+    ],
+    "beneficioSecretaria": "Capacitação rápida de alto impacto curricular, ideal para contraturno escolar e projetos de letramento digital municipal."
+  },
+  {
+    "id": "programacao-web",
+    "titulo": "Programação Web Full Stack & Empregabilidade Jovem",
+    "area": "Tecnologia da Informação",
+    "cargaHoraria": "240 horas",
+    "modalidade": "EAD com Oficinas Presenciais",
+    "nivel": "Qualificação Profissional",
+    "publico": "Estudantes do 9º ano ao Ensino Médio",
+    "alinhamento": "Inclusão Produtiva",
+    "icone": "🌐",
+    "badge": "Alta Empregabilidade",
+    "descricao": "Desenvolvimento prático de sites e plataformas interativas utilizando HTML5, CSS3, JavaScript e bancos de dados modernos, com foco no primeiro emprego e portfólio GitHub.",
+    "competencias": [
+      "Desenvolvimento de Interfaces Web Responsivas",
+      "JavaScript Moderno (ES6+) e Integração de APIs",
+      "Banco de Dados Relacional",
+      "Publicação em Nuvem e Criação de Portfólio Profissional"
+    ],
+    "beneficioSecretaria": "Escala fácil para centenas de estudantes da rede com baixo custo de infraestrutura e resultados visíveis em projetos para o município."
+  },
+  {
+    "id": "maker-docente",
+    "titulo": "Capacitação Docente: Robótica Educacional & Cultura Maker",
+    "area": "Formação Continuada de Professores",
+    "cargaHoraria": "120 horas",
+    "modalidade": "Semipresencial",
+    "nivel": "Aperfeiçoamento Profissional Docente",
+    "publico": "Professores da Rede Municipal e Estadual de Ensino",
+    "alinhamento": "Formação Continuada alinhada à BNCC",
+    "icone": "🎓",
+    "badge": "Para Professores",
+    "descricao": "Capacita professores da rede pública a utilizarem kits de robótica, Arduino, impressão 3D e metodologias ativas em sala de aula, integrando Ciências, Matemática e Tecnologia.",
+    "competencias": [
+      "Metodologia STEAM e Cultura Maker na Educação",
+      "Programação em Blocos (Scratch) e Arduino",
+      "Modelagem e Impressão 3D para Projetos Pedagógicos",
+      "Planejamento de Aulas Interdisciplinares Alinhadas à BNCC"
+    ],
+    "beneficioSecretaria": "Valorização e modernização do corpo docente municipal, transformando escolas tradicionais em polos de inovação pedagógica."
+  },
+  {
+    "id": "ia-docente",
+    "titulo": "IA na Prática Pedagógica: Ferramentas para Educadores",
+    "area": "Formação Continuada de Professores",
+    "cargaHoraria": "60 horas",
+    "modalidade": "EAD com Mentorias ao Vivo",
+    "nivel": "Capacitação Docente",
+    "publico": "Professores, Coordenadores e Gestores Escolares",
+    "alinhamento": "Transformação Digital da Educação",
+    "icone": "✨",
+    "badge": "Novo",
+    "descricao": "Treinamento intensivo para que os educadores da rede utilizem ferramentas de IA generativa para planejamento de aulas, personalização do aprendizado e combate à evasão.",
+    "competencias": [
+      "Uso de IA para Elaboração de Atividades Diferenciadas",
+      "Avaliação de Aprendizagem com Apoio Tecnológico",
+      "Mediação do Uso Ético da IA pelos Alunos",
+      "Automação de Tarefas Administrativas do Professor"
+    ],
+    "beneficioSecretaria": "Otimiza o tempo de planejamento dos professores da rede e eleva a qualidade dos planos de aula municipais."
+  },
+  {
+    "id": "manutencao-ti",
+    "titulo": "Manutenção de Computadores & Redes de Comunicação",
+    "area": "Tecnologia & Suporte",
+    "cargaHoraria": "160 horas",
+    "modalidade": "Presencial",
+    "nivel": "Iniciação / Qualificação",
+    "publico": "Jovens a partir de 14 anos",
+    "alinhamento": "Primeiro Emprego",
+    "icone": "🛠️",
+    "badge": "Prática Imediata",
+    "descricao": "Ensina montagem, diagnóstico de hardware, instalação de sistemas operacionais e configuração de redes locais cabeada e Wi-Fi de forma 100% prática.",
+    "competencias": [
+      "Diagnóstico e Manutenção Preventiva/Corretiva de Hardware",
+      "Instalação e Configuração de Windows e Linux",
+      "Crimpagem de Cabos e Configuração de Roteadores",
+      "Segurança Básica de Redes Locais"
+    ],
+    "beneficioSecretaria": "Possibilidade de formar monitores técnicos para apoiarem os laboratórios de informática das próprias escolas da rede pública."
+  },
+  {
+    "id": "gestao-powerbi",
+    "titulo": "Assistente Administrativo com Excel Avançado & Power BI",
+    "area": "Gestão & Negócios",
+    "cargaHoraria": "160 horas",
+    "modalidade": "Semipresencial",
+    "nivel": "Qualificação Profissional",
+    "publico": "Estudantes do Ensino Médio e EJA",
+    "alinhamento": "Jovem Aprendiz",
+    "icone": "📈",
+    "badge": "Alta Procura",
+    "descricao": "Prepara jovens para rotinas administrativas, financeiras e gestão de processos com domínio de planilhas eletrônicas e dashboards visuais em Power BI.",
+    "competencias": [
+      "Rotinas de RH, Finanças e Compras",
+      "Excel Avançado (Fórmulas, Procv/X, Tabelas Dinâmicas)",
+      "Criação de Dashboards Interativos em Power BI",
+      "Comunicação Corporativa e Atendimento ao Cliente"
+    ],
+    "beneficioSecretaria": "Encaixe direto com o programa Jovem Aprendiz nas empresas da cidade e nos próprios órgãos públicos municipais."
+  },
+  {
+    "id": "usinagem-cnc",
+    "titulo": "Técnico em Mecânica de Precisão & Manufatura Digital (CNC)",
+    "area": "Mecânica & Manufatura",
+    "cargaHoraria": "1.200 horas",
+    "modalidade": "Presencial",
+    "nivel": "Técnico (Novo Ensino Médio)",
+    "publico": "Alunos do Ensino Médio Regular",
+    "alinhamento": "Polo Industrial Local",
+    "icone": "⚙️",
+    "badge": "Tradição & Tecnologia",
+    "descricao": "Forma técnicos habilitados em usinagem convencional e computadorizada (Torno e Centro de Usinagem CNC), desenho técnico 3D (CAD/CAM) e metrologia dimensional.",
+    "competencias": [
+      "Programação e Operação de Máquinas CNC",
+      "Desenho Técnico Mecânico em Software CAD 3D",
+      "Metrologia com Paquímetro, Micrômetro e Projetor de Perfil",
+      "Planejamento de Processos de Fabricação Mecânica"
+    ],
+    "beneficioSecretaria": "Conecta diretamente os jovens formandos com as indústrias metalmecânicas e automotivas da região com salários competitivos."
+  }
+]

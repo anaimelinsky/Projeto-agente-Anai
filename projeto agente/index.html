@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENAI Conecta Educação | Divulgação de Cursos para Secretarias de Educação</title>
+  <meta name="description" content="Plataforma institucional do SENAI para geração de propostas e divulgação de cursos técnicos, qualificação profissional e formação docente para Secretarias Municipais e Estaduais de Educação.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-group">
+        <div class="senai-logo-badge">
+          <svg width="42" height="28" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="60" rx="6" fill="#004785"/>
+            <!-- SENAI Block stylized letters -->
+            <path d="M12 18H28V24H18V27H28V33H12V18ZM12 36H28V42H12V36Z" fill="#FFFFFF"/>
+            <path d="M34 18H42V42H34V18Z" fill="#FFFFFF"/>
+            <path d="M48 18H56L66 36V18H74V42H66L56 24V42H48V18Z" fill="#FFFFFF"/>
+            <path d="M80 18H96V24H86V27H94V33H86V36H96V42H80V18Z" fill="#E31B23"/>
+          </svg>
+          <div class="brand-titles">
+            <span class="brand-sub">SERVIÇO NACIONAL DE APRENDIZAGEM INDUSTRIAL</span>
+            <h1 class="brand-title">SENAI Conecta Educação</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-center-info">
+        <div class="agent-pill" id="agent-status-badge">
+          <span class="pulse-dot"></span>
+          <span class="agent-name">Agente IA: <strong>Anai-Ribeiro</strong></span>
+          <span class="agent-tech-pill">Azure AI</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button type="button" class="btn-icon" id="theme-toggle-btn" title="Alternar Modo Claro / Escuro" aria-label="Alternar Tema">
+          <span class="icon-moon">🌙</span>
+          <span class="icon-sun">☀️</span>
+        </button>
+        <button type="button" class="btn-outline-sm" id="btn-open-smtp-modal">
+          ⚙️ Configurar SMTP
+        </button>
+        <button type="button" class="btn-outline-sm" id="btn-open-history-modal">
+          📋 Histórico (<span id="history-counter">0</span>)
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-wrapper">
+    <!-- Hero Banner with Stats -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-tags">
+          <span class="badge-accent">✨ Programa de Parcerias Estratégicas</span>
+          <span class="badge-outline">Novo Ensino Médio & EPT</span>
+          <span class="badge-outline">BNCC Articulada</span>
+        </div>
+        <h2 class="hero-heading">Divulgação de Cursos SENAI para Redes Públicas de Ensino</h2>
+        <p class="hero-lead">
+          Conecte a excelência dos laboratórios e instrutores do SENAI às Secretarias Municipais e Estaduais de Educação. Selecione cursos, personalize a proposta institucional com auxílio da IA <strong>Anai-Ribeiro</strong> e gere e-mails oficiais de alto impacto formatados para fechar convênios educacionais.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-num" id="stat-courses-count">10</span>
+            <span class="stat-label">Cursos Prontos</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" id="stat-selected-count">0</span>
+            <span class="stat-label">Cursos Selecionados</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" id="stat-secretarias-count">7</span>
+            <span class="stat-label">Secretarias na Base</span>
+          </div>
+          <div class="stat-card stat-accent">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Gratuidade Regimental / Acordo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="banner-frame">
+          <img src="assets/banner_senai.jpg" alt="Estudantes em Laboratório de Alta Tecnologia do SENAI" class="hero-banner-img" id="hero-banner-image">
+          <div class="banner-caption">
+            <span>Laboratórios de Robótica, Automação e IA do SENAI à disposição da sua rede de ensino</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stepper Navigation -->
+    <nav class="stepper-nav" aria-label="Etapas do Processo">
+      <div class="step-item active" data-step="1">
+        <span class="step-number">1</span>
+        <div class="step-text">
+          <span class="step-title">Selecionar Cursos</span>
+          <span class="step-desc">Catálogo & Itinerários</span>
+        </div>
+      </div>
+      <div class="step-divider"></div>
+      <div class="step-item" data-step="2">
+        <span class="step-number">2</span>
+        <div class="step-text">
+          <span class="step-title">Secretaria Alvo</span>
+          <span class="step-desc">Destinatário & Gestores</span>
+        </div>
+      </div>
+      <div class="step-divider"></div>
+      <div class="step-item" data-step="3">
+        <span class="step-number">3</span>
+        <div class="step-text">
+          <span class="step-title">Gerar Proposta IA</span>
+          <span class="step-desc">Anai-Ribeiro Copilot</span>
+        </div>
+      </div>
+      <div class="step-divider"></div>
+      <div class="step-item" data-step="4">
+        <span class="step-number">4</span>
+        <div class="step-text">
+          <span class="step-title">Preview & Envio</span>
+          <span class="step-desc">Live HTML & Disparo</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- App Layout: Left Workspace (Configuration) + Right Preview (Live Email) -->
+    <div class="workflow-grid">
+      <!-- LEFT COLUMN: Steps 1, 2, 3 -->
+      <div class="workflow-left">
+        
+        <!-- STEP 1: Course Catalog -->
+        <section class="panel-card" id="step-1-panel">
+          <div class="panel-header">
+            <div class="panel-title-group">
+              <span class="panel-badge">Etapa 1</span>
+              <h3 class="panel-title">Catálogo de Cursos para Divulgação</h3>
+            </div>
+            <div class="cart-pill" id="cart-pill-counter">
+              <span id="selected-badge-text">Nenhum selecionado</span>
+            </div>
+          </div>
+          <p class="panel-intro">
+            Marque os cursos que farão parte do pacote educacional enviado à Secretaria de Educação.
+          </p>
+
+          <!-- Search & Filter Controls -->
+          <div class="catalog-controls">
+            <div class="search-box">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="course-search-input" placeholder="Buscar por título, área (TI, Robótica, IA, Mecânica)..." aria-label="Buscar Cursos">
+              <button type="button" class="btn-clear-search" id="btn-clear-search" style="display:none;">✕</button>
+            </div>
+
+            <div class="category-chips" id="category-chips-container">
+              <button type="button" class="chip active" data-category="todos">Todos</button>
+              <button type="button" class="chip" data-category="Tecnologia da Informação">TI & Software</button>
+              <button type="button" class="chip" data-category="Indústria 4.0 & Automação">Indústria 4.0 & Robótica</button>
+              <button type="button" class="chip" data-category="Eletroeletrônica & Energia">Energia & Elétrica</button>
+              <button type="button" class="chip" data-category="Formação Continuada de Professores">Capacitação Docente</button>
+              <button type="button" class="chip" data-category="Gestão & Negócios">Gestão & BI</button>
+              <button type="button" class="chip" data-category="Mecânica & Manufatura">Mecânica CNC</button>
+            </div>
+          </div>
+
+          <!-- Courses Grid -->
+          <div class="courses-grid" id="courses-grid-container">
+            <!-- Populated via Javascript -->
+          </div>
+
+          <!-- Quick Select Toolbar -->
+          <div class="catalog-footer">
+            <button type="button" class="btn-subtle" id="btn-select-all-courses">Selecionar Todos</button>
+            <button type="button" class="btn-subtle" id="btn-select-nem-courses">Combo Novo Ensino Médio</button>
+            <button type="button" class="btn-subtle" id="btn-select-docente-courses">Combo Formação Docente</button>
+            <button type="button" class="btn-subtle text-danger" id="btn-deselect-all-courses">Desmarcar Todos</button>
+          </div>
+        </section>
+
+        <!-- STEP 2: Target Secretariat Selection -->
+        <section class="panel-card" id="step-2-panel">
+          <div class="panel-header">
+            <div class="panel-title-group">
+              <span class="panel-badge">Etapa 2</span>
+              <h3 class="panel-title">Secretaria de Educação Destinatária</h3>
+            </div>
+            <button type="button" class="btn-sm btn-outline" id="btn-add-custom-sec">
+              + Nova Secretaria
+            </button>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="sec-preset-select" class="form-label">
+                Selecione uma Secretaria Cadastrada ou Digite Abaixo:
+              </label>
+              <div class="select-wrapper">
+                <select id="sec-preset-select" class="form-select">
+                  <!-- Populated via Javascript -->
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="sec-orgao" class="form-label">Órgão Oficial / Secretaria:</label>
+              <input type="text" id="sec-orgao" class="form-input" placeholder="Ex: Secretaria Municipal de Educação de Campinas">
+            </div>
+
+            <div class="form-group">
+              <label for="sec-secretario" class="form-label">Nome do(a) Secretário(a) / Dirigente:</label>
+              <input type="text" id="sec-secretario" class="form-input" placeholder="Ex: Prof. Dr. Fulano de Tal">
+            </div>
+
+            <div class="form-group">
+              <label for="sec-tratamento" class="form-label">Pronome / Forma de Tratamento:</label>
+              <select id="sec-tratamento" class="form-select">
+                <option value="Prezado(a) Secretário(a)">Prezado(a) Secretário(a)</option>
+                <option value="Magnífico(a) Secretário(a)">Magnífico(a) Secretário(a)</option>
+                <option value="Prezado(a) Dirigente Regional de Ensino">Prezado(a) Dirigente Regional de Ensino</option>
+                <option value="Prezado(a) Coordenador(a) Pedagógico(a)">Prezado(a) Coordenador(a) Pedagógico(a)</option>
+                <option value="Estimado(a) Secretário(a)">Estimado(a) Secretário(a)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="sec-email" class="form-label">E-mail Institucional Oficial:</label>
+              <input type="email" id="sec-email" class="form-input" placeholder="gabinete.educacao@municipio.gov.br">
+            </div>
+
+            <div class="form-group">
+              <label for="sec-cidade" class="form-label">Cidade e Estado:</label>
+              <div class="input-inline">
+                <input type="text" id="sec-cidade" class="form-input" placeholder="Cidade">
+                <input type="text" id="sec-estado" class="form-input uf-input" placeholder="UF" maxlength="2">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="sec-porte" class="form-label">Porte da Rede Escolar:</label>
+              <input type="text" id="sec-porte" class="form-input" placeholder="Ex: Mais de 50.000 alunos">
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 3: Proposal Customization & AI Agent Generation -->
+        <section class="panel-card" id="step-3-panel">
+          <div class="panel-header">
+            <div class="panel-title-group">
+              <span class="panel-badge">Etapa 3</span>
+              <h3 class="panel-title">Personalização e Inteligência Artificial</h3>
+            </div>
+            <div class="ai-live-tag">
+              <span class="sparkle">✨</span> Azure AI Projects
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="foco-proposta" class="form-label">Foco Estratégico da Proposta:</label>
+              <select id="foco-proposta" class="form-select">
+                <option value="Itinerários Técnicos do Novo Ensino Médio (Itinerário V)">Itinerários Técnicos do Novo Ensino Médio (Itinerário V)</option>
+                <option value="Gratuidade Regimental e Inclusão Produtiva Jovem">Gratuidade Regimental & Inclusão Produtiva Jovem</option>
+                <option value="Capacitação Docente em Tecnologias Maker, Robótica e IA">Capacitação Docente em Tecnologias Maker, Robótica e IA</option>
+                <option value="Convênio para Visitas Técnicas e Aulas Práticas nos Laboratórios SENAI">Visitas Técnicas & Aulas Práticas nos Laboratórios SENAI</option>
+                <option value="Programa Jovem Aprendiz Industrial para Estudantes da Rede">Programa Jovem Aprendiz Industrial</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="tom-proposta" class="form-label">Tom de Comunicação:</label>
+              <select id="tom-proposta" class="form-select">
+                <option value="Institucional Formal & Solene">Institucional Formal & Solene</option>
+                <option value="Executivo & Foco em Resultados/IDEB">Executivo & Foco em Resultados/IDEB</option>
+                <option value="Colaborativo & Parceria Estratégica" selected>Colaborativo & Parceria Estratégica</option>
+                <option value="Dinâmico, Inspirador & Jovem">Dinâmico, Inspirador & Jovem</option>
+              </select>
+            </div>
+
+            <!-- Remetente SENAI -->
+            <div class="form-group">
+              <label for="remetente-unidade" class="form-label">Unidade SENAI Remetente:</label>
+              <input type="text" id="remetente-unidade" class="form-input" value="Escola SENAI Suíço-Brasileira Paulo Ernesto Tolle">
+            </div>
+
+            <div class="form-group">
+              <label for="remetente-responsavel" class="form-label">Nome do Gestor/Consultor SENAI:</label>
+              <input type="text" id="remetente-responsavel" class="form-input" value="Lucas Gabriel Ribeiro">
+            </div>
+
+            <div class="form-group">
+              <label for="remetente-cargo" class="form-label">Cargo:</label>
+              <input type="text" id="remetente-cargo" class="form-input" value="Coordenador de Relações com o Mercado e Educação Profissional">
+            </div>
+
+            <div class="form-group">
+              <label for="remetente-contato" class="form-label">Telefone / WhatsApp / E-mail:</label>
+              <input type="text" id="remetente-contato" class="form-input" value="(11) 3838-8000 | parcerias.educacao@sp.senai.br">
+            </div>
+          </div>
+
+          <!-- AI Generation Button Bar -->
+          <div class="ai-trigger-box">
+            <div class="ai-trigger-info">
+              <div class="ai-avatar">🤖</div>
+              <div>
+                <strong>Agente Anai-Ribeiro</strong>
+                <p>A IA irá redigir um texto persuasivo adaptado à realidade da rede escolar e aos cursos marcados.</p>
+              </div>
+            </div>
+            <button type="button" class="btn-ai-generate" id="btn-generate-ai">
+              <span class="btn-ai-icon">✨</span>
+              <span class="btn-ai-text">Gerar Proposta com IA</span>
+              <span class="btn-ai-spinner" style="display:none;"></span>
+            </button>
+          </div>
+
+          <!-- Live Status feedback -->
+          <div id="ai-status-message" class="ai-status-msg" style="display:none;"></div>
+        </section>
+
+      </div>
+
+      <!-- RIGHT COLUMN: Step 4 Live Preview & Actions -->
+      <div class="workflow-right">
+        <section class="panel-card preview-panel-card" id="step-4-panel">
+          <div class="preview-header">
+            <div class="preview-header-left">
+              <span class="panel-badge highlight">Etapa 4</span>
+              <h3 class="panel-title">Pré-Visualização do E-mail</h3>
+            </div>
+
+            <!-- View Switcher (Desktop / Mobile / Code) -->
+            <div class="view-switcher" role="tablist">
+              <button type="button" class="btn-view active" id="view-desktop-btn" title="Visualização Desktop">
+                🖥️ Desktop
+              </button>
+              <button type="button" class="btn-view" id="view-mobile-btn" title="Visualização Smartphone">
+                📱 Mobile
+              </button>
+              <button type="button" class="btn-view" id="view-code-btn" title="Ver Código HTML">
+                &lt;/&gt; Código
+              </button>
+            </div>
+          </div>
+
+          <!-- Email Client Toolbar Simulation -->
+          <div class="email-mockup-bar">
+            <div class="mockup-window-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="mockup-info">
+              <div class="mockup-row">
+                <span class="mock-label">Para:</span>
+                <span class="mock-value" id="preview-mock-to">gabinete.seduc@educacao.sp.gov.br</span>
+              </div>
+              <div class="mockup-row">
+                <span class="mock-label">Assunto:</span>
+                <input type="text" id="email-subject-input" class="mockup-subject-input" value="Proposta de Parceria SENAI: Qualificação Técnica e Inovação para Estudantes da Rede Pública">
+              </div>
+            </div>
+          </div>
+
+          <!-- Email Preview Screen -->
+          <div class="email-viewport-container" id="email-viewport-container">
+            <!-- Responsive Container that simulates Desktop or Mobile -->
+            <div class="email-viewport-frame mode-desktop" id="email-viewport-frame">
+              <iframe id="email-preview-iframe" title="Pré-visualização do E-mail Oficial SENAI" sandbox="allow-same-origin"></iframe>
+            </div>
+
+            <!-- HTML Source Code View (hidden by default) -->
+            <div class="email-code-container" id="email-code-container" style="display: none;">
+              <div class="code-actions-bar">
+                <span>Código HTML com Estilos Inline (Compatível com Outlook, Gmail e Mailchimp)</span>
+                <button type="button" class="btn-sm" id="btn-copy-code-direct">Copiar Código</button>
+              </div>
+              <textarea id="email-html-raw" class="code-textarea" readonly></textarea>
+            </div>
+          </div>
+
+          <!-- Action Buttons Bar -->
+          <div class="preview-actions-bar">
+            <div class="action-buttons-group">
+              <button type="button" class="btn-primary" id="btn-copy-formatted-email" title="Copia o conteúdo para colar com formatação no Outlook ou Gmail">
+                📋 Copiar E-mail Formatado
+              </button>
+
+              <button type="button" class="btn-secondary" id="btn-open-mailto" title="Abre o programa de e-mail do seu computador pré-preenchido">
+                ✉️ Abrir no Outlook / E-mail
+              </button>
+
+              <button type="button" class="btn-accent" id="btn-send-via-server" title="Dispara via servidor Python / SMTP">
+                🚀 Enviar via Servidor SENAI
+              </button>
+
+              <button type="button" class="btn-outline" id="btn-download-html" title="Baixa o arquivo HTML pronto">
+                💾 Baixar HTML
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- MODAL: Nova Secretaria -->
+  <div class="modal-backdrop" id="modal-new-sec" style="display:none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h4 class="modal-title">Cadastrar Nova Secretaria / Escola</h4>
+        <button type="button" class="btn-modal-close" id="btn-close-sec-modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">Nome do Órgão / Secretaria:</label>
+          <input type="text" id="modal-sec-orgao" class="form-input" placeholder="Ex: Secretaria Municipal de Educação de Santos">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Nome do(a) Secretário(a):</label>
+          <input type="text" id="modal-sec-nome" class="form-input" placeholder="Ex: Profa. Maria da Silva">
+        </div>
+        <div class="form-group">
+          <label class="form-label">E-mail Institucional:</label>
+          <input type="email" id="modal-sec-email" class="form-input" placeholder="contato@sme.santos.sp.gov.br">
+        </div>
+        <div class="form-row">
+          <div class="form-group flex-1">
+            <label class="form-label">Cidade:</label>
+            <input type="text" id="modal-sec-cidade" class="form-input" placeholder="Santos">
+          </div>
+          <div class="form-group uf-group">
+            <label class="form-label">UF:</label>
+            <input type="text" id="modal-sec-uf" class="form-input" placeholder="SP" maxlength="2">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-subtle" id="btn-cancel-new-sec">Cancelar</button>
+        <button type="button" class="btn-primary" id="btn-save-new-sec">Salvar Secretaria</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Configurar SMTP -->
+  <div class="modal-backdrop" id="modal-smtp" style="display:none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h4 class="modal-title">⚙️ Configurações de Envio SMTP (Opcional)</h4>
+        <button type="button" class="btn-modal-close" id="btn-close-smtp-modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-info-text">
+          Caso deseje disparar e-mails reais diretamente do servidor Python pelo botão "Enviar via Servidor", preencha suas credenciais SMTP. Se deixar em branco, o sistema gerará o protocolo simulado oficial com log de expedição.
+        </p>
+        <div class="form-group">
+          <label class="form-label">Servidor SMTP Host:</label>
+          <input type="text" id="smtp-host" class="form-input" placeholder="Ex: smtp.office365.com ou smtp.gmail.com">
+        </div>
+        <div class="form-row">
+          <div class="form-group flex-1">
+            <label class="form-label">Porta SMTP:</label>
+            <input type="number" id="smtp-port" class="form-input" value="587">
+          </div>
+          <div class="form-group flex-1">
+            <label class="form-label">Segurança:</label>
+            <input type="text" class="form-input" value="STARTTLS" readonly>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Usuário / E-mail de Envio:</label>
+          <input type="email" id="smtp-user" class="form-input" placeholder="seu-email@sp.senai.br">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Senha / App Password:</label>
+          <input type="password" id="smtp-pass" class="form-input" placeholder="••••••••••••">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-subtle" id="btn-cancel-smtp">Fechar</button>
+        <button type="button" class="btn-primary" id="btn-save-smtp">Salvar Configurações</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Histórico de Envios -->
+  <div class="modal-backdrop" id="modal-history" style="display:none;">
+    <div class="modal-card modal-large">
+      <div class="modal-header">
+        <h4 class="modal-title">📋 Histórico de Divulgações e Envios</h4>
+        <button type="button" class="btn-modal-close" id="btn-close-history-modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div id="history-empty-state" class="empty-state" style="display:none;">
+          <span>📭</span>
+          <p>Nenhuma divulgação enviada ainda nesta sessão.</p>
+        </div>
+        <div class="history-table-wrapper" id="history-table-wrapper">
+          <table class="history-table">
+            <thead>
+              <tr>
+                <th>Data / Hora</th>
+                <th>Secretaria</th>
+                <th>E-mail</th>
+                <th>Cursos</th>
+                <th>Canal / Status</th>
+              </tr>
+            </thead>
+            <tbody id="history-table-body">
+              <!-- Populated via Javascript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-subtle text-danger" id="btn-clear-history">Limpar Histórico</button>
+        <button type="button" class="btn-primary" id="btn-close-history-footer">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Detalhes do Curso (Ementa) -->
+  <div class="modal-backdrop" id="modal-course-details" style="display:none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="course-modal-title-group">
+          <span class="course-modal-badge" id="modal-course-area">Área</span>
+          <h4 class="modal-title" id="modal-course-title">Título do Curso</h4>
+        </div>
+        <button type="button" class="btn-modal-close" id="btn-close-course-modal">✕</button>
+      </div>
+      <div class="modal-body" id="modal-course-body">
+        <!-- Populated dynamically -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-subtle" id="btn-close-course-footer">Fechar</button>
+        <button type="button" class="btn-primary" id="btn-toggle-course-from-modal">Adicionar à Divulgação</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
