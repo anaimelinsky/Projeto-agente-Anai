@@ -7,12 +7,14 @@ Plataforma Web completa para **divulgação estratégica de cursos do SENAI por 
 ## 🚀 Como Iniciar a Aplicação
 
 ### Opção 1: Executar com 1 Clique (Windows)
-Dê um duplo clique no arquivo [`iniciar.bat`](file:///c:/Users/09717590818/Desktop/projeto%20agente/iniciar.bat).
+Dê um duplo clique no arquivo [`iniciar.bat`](iniciar.bat).
 
 ### Opção 2: Pelo Terminal / PowerShell
 ```powershell
+# Ativar ambiente virtual e iniciar servidor na porta 5000:
 .\.venv\Scripts\python.exe server.py 5000
 ```
+*(Ou utilize `python server.py 5000` caso utilize o Python global)*
 
 Abra o seu navegador em:
 👉 **[http://localhost:5000](http://localhost:5000)**
@@ -29,7 +31,7 @@ Abra o seu navegador em:
 
 ### 2. 🏛️ Gestão de Secretarias de Educação Destinatárias
 - Base com órgãos cadastrados: **SEDUC-SP**, **SME São Paulo**, **SEED-PR**, **SME Curitiba**, **SEE-MG**, **SME Campinas**, **SME Ribeirão Preto**.
-- Cadastro dinâmico de **Novas Secretarias** com persistência automática no navegador.
+- Cadastro dinâmico de **Novas Secretarias** com persistência automática no navegador (`localStorage`).
 - Preenchimento inteligente do nome do(a) Secretário(a), e-mail institucional oficial, cidade, estado e porte da rede.
 
 ### 3. 🤖 Redação de Propostas com IA (Agente Anai-Ribeiro)
@@ -40,6 +42,7 @@ Abra o seu navegador em:
   - **Justificativa pedagógica** alinhada ao IDEB, combate à evasão e BNCC.
   - **Impacto dos laboratórios de ponta do SENAI** na empregabilidade dos jovens.
   - **Chamada para ação (CTA)** para celebração de Acordo de Cooperação Técnica.
+- **Motor de Fallback**: Caso a conexão com a nuvem esteja indisponível, gera automaticamente propostas completas de alta fidelidade pedagógica.
 
 ### 4. ✉️ Live Preview do E-mail Responsivo (Outlook / Gmail)
 - Renderização visual em tempo real do e-mail com a identidade oficial do SENAI:
@@ -65,11 +68,12 @@ Abra o seu navegador em:
 
 ## 📁 Estrutura do Projeto
 
-- [`index.html`](file:///c:/Users/09717590818/Desktop/projeto%20agente/index.html): Estrutura semântica da página web.
-- [`styles.css`](file:///c:/Users/09717590818/Desktop/projeto%20agente/styles.css): Estilos Vanilla CSS com paleta SENAI, dark/light mode e componentes glassmorphism.
-- [`app.js`](file:///c:/Users/09717590818/Desktop/projeto%20agente/app.js): Lógica de estado, IA Copilot, preview ao vivo e cópia rica.
-- [`server.py`](file:///c:/Users/09717590818/Desktop/projeto%20agente/server.py): Backend Python com rotas para o Azure AI Agent e disparo de e-mails.
-- [`agente.py`](file:///c:/Users/09717590818/Desktop/projeto%20agente/agente.py): Script de referência da conexão Azure AI Projects.
-- [`courses.json`](file:///c:/Users/09717590818/Desktop/projeto%20agente/courses.json): Catálogo de cursos técnicos e de qualificação.
-- [`secretarias.json`](file:///c:/Users/09717590818/Desktop/projeto%20agente/secretarias.json): Base inicial de Secretarias de Educação.
+- [`index.html`](index.html): Estrutura semântica da página web.
+- [`styles.css`](styles.css): Estilos Vanilla CSS com paleta SENAI, dark/light mode e componentes glassmorphism.
+- [`app.js`](app.js): Lógica de estado, IA Copilot, preview ao vivo e cópia rica.
+- [`server.py`](server.py): Backend Python com rotas para o Azure AI Agent e disparo de e-mails.
+- [`agente.py`](agente.py): Script de referência da conexão Azure AI Projects.
+- [`courses.json`](courses.json): Catálogo de cursos técnicos e de qualificação.
+- [`secretarias.json`](secretarias.json): Base inicial de Secretarias de Educação.
+- [`iniciar.bat`](iniciar.bat): Script em lote para execução rápida no Windows.
 - `assets/banner_senai.jpg`: Banner de alta definição dos laboratórios e alunos do SENAI.
